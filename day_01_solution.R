@@ -43,7 +43,7 @@
     # if the subset is not 0 (i.e. the table finally has 2 numbers that add up to 2020)
     if(nrow(any_2020) != 0) {
       
-      # then multiplication output from the table
+      # then print multiplication output from the table
       print(any_2020$mult) 
       
       # and stop the loop from running since we accomplished our mission
