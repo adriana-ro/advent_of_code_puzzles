@@ -65,5 +65,5 @@
   table[, mult := v1 * v2* v3]
 
   # subset to the rows where the sum of the 3 numbers is 2020, then get the multiplication and solved! 
-  table[sum == 2020]
+  table[sum == 2020]$mult
 
