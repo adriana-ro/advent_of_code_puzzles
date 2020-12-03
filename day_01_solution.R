@@ -1,7 +1,7 @@
 #====================================================================================================================================================#
 # notes: Advent of Code Day 1
 # author: Adriana Rodriguez 
-# data: 12/01/2020
+# date: 12/01/2020
 #====================================================================================================================================================#
 
 #========================#
@@ -43,11 +43,11 @@
     # if the subset is not 0 (i.e. the table finally has 2 numbers that add up to 2020)
     if(nrow(any_2020) != 0) {
       
-      # then print the table to get the numbers and the multiplication output 
-      print(any_2020) 
+      # then multiplication output from the table
+      print(any_2020$mult) 
       
       # and stop the loop from running since we accomplished our mission
-      stop()
+      stop("You have found your answer")
     
       # end if statement
       }
@@ -68,4 +68,3 @@
 
   # subset to the rows where the sum of the 3 numbers is 2020, then get the multiplication and solved! 
   table[sum == 2020]$mult
-
