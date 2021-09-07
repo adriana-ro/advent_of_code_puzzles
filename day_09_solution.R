@@ -132,3 +132,35 @@
   }
     
     
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  copy_puzzle <- copy(puzzle_9)
+  
+  repeat {
+    
+  preamble_nums_expand <- subset(as.data.table(expand.grid(V1 = copy_puzzle[1:25,]$V1, V2 = copy_puzzle[1:25,]$V1)), V1 != V2)
+  preamble_nums_expand[, sum_nums := V1 + V2]
+
+  other_nums <- copy_puzzle[26:nrow(copy_puzzle),]
+  other_nums[V1%chin%unique(preamble_nums_expand$sum_nums), flag_is_valid := 1]
+  
+  if(is.na(other_nums[1]$flag_is_valid))   { stop(paste0("invalid number is ", other_nums[i]$V1))
+    } else { copy_puzzle <- copy_puzzle[2:nrow(copy_puzzle),]
+    }
+
+  }
+
+  
+  
+  
+  
+  
+  
